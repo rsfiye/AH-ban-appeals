@@ -31,7 +31,7 @@ exports.handler = async function (event, context) {
         payload.token !== undefined) {
         
         const userInfo = decodeJwt(payload.token);
-        const BlockedUsers = [''];
+        const BlockedUsers = ['"188160596062109697",'];
         if (BlockedUsers.indexOf(userInfo.id) > -1)
         {
             return {
